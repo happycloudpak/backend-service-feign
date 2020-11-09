@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 //@FeignClient( name="http-client", url="http://localhost:18001" )
-@FeignClient( name="backend-provider-service" )	//url 대신에 eureka의 service id를 지정해도 
+@FeignClient( name="backend-provider" )	//url 대신에 eureka의 service id를 지정해도 
 public interface IHttpClient {
 	@GetMapping("/provider/{message}")
 	@ApiOperation(value="Get Message of Provider")
