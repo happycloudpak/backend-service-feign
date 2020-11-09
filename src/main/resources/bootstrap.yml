@@ -1,0 +1,16 @@
+server:
+  port: ${server_port:8001}
+
+spring:
+  cloud: 
+    config:
+      uri: ${config_servers:http://localhost:9001}
+      searchPaths: backend-service-feign
+---
+spring:
+  application:
+    name: backend-service-feign
+  profiles:
+    active: local
+    include: common
+  
